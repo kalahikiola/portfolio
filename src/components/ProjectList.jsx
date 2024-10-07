@@ -7,7 +7,7 @@ const ProjectList = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get('https://aaronbence.dev/portfolio-backend/wp-json/wp/v2/project?_embed')
+        axios.get('backend')
         .then(response => {
             setProjects(response.data);
         })
