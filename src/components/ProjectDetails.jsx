@@ -7,7 +7,7 @@ const ProjectDetails = () => {
     const [project, setProject] = useState(null);
 
     useEffect(() => {
-        axios.get(`backend`)
+        axios.get(`http://localhost/portfolio/wp-json/wp/v2/project`)
         .then(response => {
             setProject(response.data);
         })
