@@ -76,6 +76,25 @@ button:focus-visible {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f8f7f5;
+    background-color: #0C0C0C;
+  }
+  a:hover {
+    color: #F2613F;
+  }
+  button {
+    background-color: #f8f7f5;
+  }
+  .project {
+    background-color: #26415E;
+  }
+  .about-tile {
+    background-color: #26415E;
+  }
+}
+
 /* Arrow styles */
 body h1, h2, h3, .home-p {
     font-family: "Lucida Console", Monaco, monospace;
@@ -84,13 +103,13 @@ body h1, h2, h3, .home-p {
 /* Arrow & Hover Animation */
 @keyframes color {
     0% {
-      fill: #3b82f6;
+      fill: #F2613F;
     }
     50% {
-      fill: #9fbef0;
+      fill: #f5af9f;
     }
     100% {
-      fill: #3b82f6;
+      fill: #F2613F;
     }
 }
 

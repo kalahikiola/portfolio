@@ -2,9 +2,9 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section id='home' className="h-screen flex flex-col justify-center items-center bg-gray-100">
-        <h1 className="text-5xl font-extrabold text-gray-900">Aaron Bence</h1>
-        <p className="home-p text-2xl mt-4 text-gray-700">Web Development & Design</p>
+    <section id='home' className="h-screen flex flex-col justify-center items-center">
+        <h1 className="text-5xl font-extrabold">Aaron Bence</h1>
+        <p className="home-p text-2xl mt-4">Gameplay Programmer & Web Developer</p>
         <a href="#projects" className="absolute bottom-20">
             <svg id="more-arrows">
             <polygon className="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>

@@ -7,7 +7,7 @@ const ProjectList = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost/portfolio/wp-json/wp/v2/project')
+        axios.get('https://aaronbence.dev/portfolio-backend/wp-json/wp/v2/project')
         .then(response => {
             setProjects(response.data);
         })
@@ -25,13 +25,13 @@ const ProjectList = () => {
         const x = useTransform(scrollYProgress, [0, 1], ["12.5%", "-140%"]);
       
         return (
-          <section ref={targetRef} id='projects' className="relative h-[300vh] bg-gray-100">
+          <section ref={targetRef} id='projects' className="relative h-[300vh]">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
               <motion.div style={{ x }} className="flex gap-4">
                 {projects.map(project => (
-                    <article key={project.id} className="project p-6 border border-gray-300 rounded-xl shadow-lg bg-white w-3/4 flex-shrink-0 items-center">
+                    <article key={project.id} className="project p-6 border rounded-xl shadow-lg bg-white w-3/4 flex-shrink-0 items-center">
                         <div className="w-3/4 items-center content-center mx-auto">
-                            <h3 className="text-3xl text-center font-semibold mb-4 text-gray-900">{project.title.rendered}</h3>
+                            <h3 className="text-3xl text-center font-semibold mb-4">{project.title.rendered}</h3>
                             {project._embedded && project._embedded['wp:featuredmedia'] && (
                             <img
                                 src={project._embedded['wp:featuredmedia'][0].source_url}
@@ -39,7 +39,7 @@ const ProjectList = () => {
                                 className="w-3/4 h-2/4 object-cover rounded-lg mb-4 mx-auto shadow-md "
                             />
                             )}
-                            <div className="mb-4 text-gray-700" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
+                            <div className="mb-4" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
                             {Array.isArray(project.acf.tech_stack) && (
                               <ul className="mb-4 flex flex-wrap justify-center gap-2">
                                 {project.acf.tech_stack.map((tech, index) => (
