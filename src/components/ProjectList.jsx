@@ -18,7 +18,7 @@ const ProjectList = () => {
         // PROJECTS SECTION
         <section id='projects' className='pt-10 mx-auto mt-[400px] flex flex-col gap-20 items-center content-center'>
             {projects.map(project => (
-                <article key={project.id} className="project group relative rounded-xl shadow-[0_0_22px_4px_rgba(0,0,0,0.75)] shadow-main-accent w-3/4 flex-shrink-0 items-center">
+                <article key={project.id} className="project group relative overflow-hidden ease-in-out rounded-xl shadow-[0_0_22px_4px_rgba(0,0,0,0.75)] shadow-main-accent w-3/4 flex-shrink-0 items-center">
 
                         {/* PROJECT SCREENSHOT */}
                         {project._embedded && project._embedded['wp:featuredmedia'] && (
@@ -30,7 +30,8 @@ const ProjectList = () => {
                         )}
 
                         {/* PROJECT INFORMATION */}
-                        <div className='opacity-0 absolute top-0 bg-project-bg rounded-xl p-10 mx-auto duration-200 ease-in group-hover:opacity-100'>
+                        <div className='absolute top-0 origin-top-left bg-project-bg rounded-xl p-10 h-full w-full 
+                        mx-auto animate-rotate-out group-hover:animate-rotate-in'>
                             <h3 className="text-3xl text-center font-semibold mb-4">{project.title.rendered}</h3>
                             <div className="mb-4" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
                             {Array.isArray(project.acf.tech_stack) && (
@@ -42,7 +43,8 @@ const ProjectList = () => {
                                 ))}
                                 </ul>
                             )}
-                            <a href={project.acf.live_link} className="text-main-white hover:text-main-accent transition duration-300 px-4 py-2 border-2 border-white bg-main-accent hover:bg-main-white rounded-full inline-block mt-4">Live Site</a>
+                            <a href={project.acf.live_link} className="text-main-white hover:text-main-accent transition duration-300 px-4 py-2
+                            border-2 border-white bg-main-accent hover:bg-main-white rounded-full inline-block mt-4">Live Site</a>
                         </div>
                 </article>
             ))}
