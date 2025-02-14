@@ -79,7 +79,7 @@ button:focus-visible {
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f8f7f5;
-    background-color: #0C0C0C;
+    background-color: #191919;
   }
   a:hover {
     color: #F2613F;
@@ -88,7 +88,9 @@ button:focus-visible {
     background-color: #f8f7f5;
   }
   .project {
-    background-color: #26415E;
+    background-color: #56667A;
+    border-color: #494949;
+    color: #f8f7f5;
   }
   .about-tile {
     background-color: #26415E;
@@ -103,13 +105,13 @@ body h1, h2, h3, .home-p {
 /* Arrow & Hover Animation */
 @keyframes color {
     0% {
-      fill: #F2613F;
+      fill: #f8f7f5;
     }
     50% {
-      fill: #f5af9f;
+      fill: #a1a1a1;
     }
     100% {
-      fill: #F2613F;
+      fill: #f8f7f5;
     }
 }
 
@@ -119,7 +121,6 @@ body h1, h2, h3, .home-p {
 }
 
 #more-arrows:hover polygon {
-    fill: #3b82f6;
     transition: all .2s ease-out;
     animation-play-state: paused;
 }
@@ -133,7 +134,6 @@ body h1, h2, h3, .home-p {
 }
     
 polygon {
-    fill: #3b82f6;
     transition: all .2s ease-out;
 }
 

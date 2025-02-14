@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, useTransform, useScroll } from "framer-motion";
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const ProjectList = () => {
     const [projects, setProjects] = useState([]);
@@ -16,51 +14,37 @@ const ProjectList = () => {
         });
     }, []);
 
-    const HorizontalScrollCarousel = () => {
-        const targetRef = useRef(null);
-        const { scrollYProgress } = useScroll({
-          target: targetRef,
-        });
-      
-        const x = useTransform(scrollYProgress, [0, 1], ["12.5%", "-140%"]);
-      
-        return (
-          <section ref={targetRef} id='projects' className="relative h-[300vh]">
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-              <motion.div style={{ x }} className="flex gap-4">
-                {projects.map(project => (
-                    <article key={project.id} className="project p-6 border rounded-xl shadow-lg bg-white w-3/4 flex-shrink-0 items-center">
-                        <div className="w-3/4 items-center content-center mx-auto">
+    return (
+        <section id='projects' className='mt-20 pt-10 mx-auto flex flex-col gap-20 items-center content-center'>
+            {projects.map(project => (
+                <article key={project.id} className="project group relative rounded-xl shadow-[0_0_22px_4px_rgba(0,0,0,0.75)] shadow-main-accent w-3/4 flex-shrink-0 items-center">
+
+                        {project._embedded && project._embedded['wp:featuredmedia'] && (
+                        <img
+                            src={project._embedded['wp:featuredmedia'][0].source_url}
+                            alt={project.title.rendered}
+                            className="relative w-full rounded-xl mx-auto shadow-md "
+                        />
+                        )}
+
+                        <div className='opacity-0 absolute top-0 bg-project-bg rounded-xl p-10 mx-auto duration-200 ease-in group-hover:opacity-100'>
                             <h3 className="text-3xl text-center font-semibold mb-4">{project.title.rendered}</h3>
-                            {project._embedded && project._embedded['wp:featuredmedia'] && (
-                            <img
-                                src={project._embedded['wp:featuredmedia'][0].source_url}
-                                alt={project.title.rendered}
-                                className="w-3/4 h-2/4 object-cover rounded-lg mb-4 mx-auto shadow-md "
-                            />
-                            )}
                             <div className="mb-4" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
                             {Array.isArray(project.acf.tech_stack) && (
-                              <ul className="mb-4 flex flex-wrap justify-center gap-2">
+                                <ul className="mb-4 flex flex-wrap justify-center gap-2">
                                 {project.acf.tech_stack.map((tech, index) => (
-                                  <li key={index} className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                    <li key={index} className="bg-main-accent text-main-white px-4 py-2 rounded-full text-sm font-semibold">
                                     {tech}
-                                  </li>
+                                    </li>
                                 ))}
-                              </ul>
+                                </ul>
                             )}
-                            <a href="" className="link-current hover:text-blue-500 transition duration-300 px-4 py-2 border-2 border-blue-600 rounded-full inline-block mt-4">Live Site</a>
+                            <a href={project.acf.live_link} className="text-main-white hover:text-main-accent transition duration-300 px-4 py-2 border-2 border-white bg-main-accent hover:bg-main-white rounded-full inline-block mt-4">Live Site</a>
                         </div>
-                    </article>
-                ))}
-              </motion.div>
-            </div>
-          </section>
-        );
-    };
-
-    return (
-        <HorizontalScrollCarousel />
+                </article>
+            ))}
+        </section>
+            
     );
 };
 

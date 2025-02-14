@@ -8,7 +8,14 @@ export default {
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                "main-accent": "#F2613F",
+                "main-black": "#191919",
+                "main-white": "#f8f7f5",
+                "project-bg": "#56667A",
+            },
+        },
     },
     plugins: [
         plugin(function ({ matchUtilities, theme }) {
