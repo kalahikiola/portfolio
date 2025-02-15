@@ -10,24 +10,34 @@ export default {
     theme: {
         extend: {
             colors: {
-                "main-accent": "#F2613F",
+                "main-accent": "#CE4257",
                 "main-black": "#191919",
                 "main-white": "#f8f7f5",
-                "project-bg": "#56667A",
+                "project-bg": "#BBCBCB",
             },
             keyframes: {
-                rotate_in: {
-                    '0%': { transform: 'rotate(90.0deg)' },
-                    '100%': { transform: 'rotate(0.0deg)' },
+                slide_up: {
+                    '0%': { top: '100%' },
+                    '100%': { top: '0%' },
                 },
-                rotate_out: {
-                    '0%': { transform: 'rotate(0.0deg)' },
-                    '100%': { transform: 'rotate(90.0deg)' },
+                slide_down: {
+                    '0%': { top: '0%' },
+                    '100%': { top: '100%' },
+                },
+                scale_up: {
+                    '0%': { transform: 'scale(1)' },
+                    '100%': { transform: 'scale(1.1)' },
+                },
+                scale_down: {
+                    '0%': { transform: 'scale(1.1)' },
+                    '100%': { transform: 'scale(1)' },
                 },
             },
             animation: {
-                'rotate-in': 'rotate_in 0.5s ease 1 forwards',
-                'rotate-out': 'rotate_out 0.5s ease 1 forwards',
+                'slide-up': 'slide_up 0.18s ease-out 1 forwards',
+                'slide-down': 'slide_down 0.1s ease-out 0.25s 1 forwards',
+                'scale-up': 'scale_up 0.18s ease-out 1 forwards',
+                'scale-down': 'scale_down 0.18s ease-out 1 forwards',
             },
         },
     },
