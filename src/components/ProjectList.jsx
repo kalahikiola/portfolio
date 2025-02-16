@@ -19,14 +19,14 @@ const ProjectList = () => {
         <section id='projects' className='pt-10 mx-auto mt-[400px] flex flex-col gap-20 items-center content-center ease-in'>
             {projects.map(project => (
                 <article key={project.id} className="project group relative overflow-hidden rounded-xl shadow-[0_0_22px_4px_rgba(0,0,0,0.75)]
-                shadow-main-accent w-3/4 flex-shrink-0 items-center animate-scale-down hover:animate-scale-up">
+                shadow-main-accent w-3/4 h-[580px] flex-shrink-0 items-center animate-scale-down hover:animate-scale-up">
 
                         {/* PROJECT SCREENSHOT */}
                         {project._embedded && project._embedded['wp:featuredmedia'] && (
                         <img
                             src={project._embedded['wp:featuredmedia'][0].source_url}
                             alt={project.title.rendered}
-                            className="relative w-full rounded-xl mx-auto shadow-md "
+                            className="relative w-full rounded-xl mx-0 shadow-md origin-bottom-right group-hover:w-3/4 group-hover:bottom-0"
                         />
                         )}
 
