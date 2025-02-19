@@ -10,10 +10,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                "main-accent": "#CE4257",
-                "main-black": "#191919",
-                "main-white": "#f8f7f5",
-                "project-bg": "#BBCBCB",
+                "main-accent": "#F24333", // Vermillion
+                "main-black": "#282828", // Raisin Black
+                "main-light": "#ECE5F0", // Magnolia
+                "main-shadow": "#7180AC", // Glaucous
             },
             keyframes: {
                 slide_up: {

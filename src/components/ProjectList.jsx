@@ -16,25 +16,25 @@ const ProjectList = () => {
 
     return (
         // PROJECTS SECTION
-        <section id='projects' className='pt-10 mx-auto mt-[400px] flex flex-col gap-20 items-center content-center ease-in'>
+        <section id='projects' className='mx-auto mt-[400px] flex flex-col gap-20 items-center bg-main-black content-center ease-in'>
             {projects.map(project => (
-                <article key={project.id} className="project group relative overflow-hidden rounded-xl shadow-[0_0_22px_4px_rgba(0,0,0,0.75)]
-                shadow-main-accent w-3/4 h-[580px] flex-shrink-0 items-center animate-scale-down hover:animate-scale-up">
+                <article key={project.id} className="project group relative bg-main-black rounded-xl
+                w-full h-dvh flex-shrink-0 items-center">
 
                         {/* PROJECT SCREENSHOT */}
                         {project._embedded && project._embedded['wp:featuredmedia'] && (
                         <img
                             src={project._embedded['wp:featuredmedia'][0].source_url}
                             alt={project.title.rendered}
-                            className="relative w-full rounded-xl mx-0 shadow-md origin-bottom-right group-hover:w-3/4 group-hover:bottom-0"
+                            className="relative w-1/2 z-30 left-0 rounded-xl m-[50px] mb-0 shadow-[0_0_30.4px_9px] shadow-main-shadow"
                         />
                         )}
 
                         {/* PROJECT INFORMATION */}
-                        <div className='absolute top-0 bg-project-bg rounded-xl p-10 w-3/4 
-                        mx-auto animate-slide-down group-hover:animate-slide-up'>
-                            <h3 className="text-3xl text-center font-semibold mb-4">{project.title.rendered}</h3>
-                            <div className="mb-4" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
+                        <div className='relative top-60% float-right z-20 bg-main-light rounded-xl p-10 w-1/2 h-1/2
+                        m-[50px] -mt-[100px] shadow-[0_0_30.4px_9px] shadow-main-shadow'>
+                            <h3 className="text-2xl font-semibold mb-6 ml-[25%] text-main-black">{project.title.rendered}</h3>
+                            <div className="mb-4 ml-[25%] text-sm text-main-black" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
                             {/* {Array.isArray(project.acf.tech_stack) && (
                                 <ul className="mb-4 flex flex-wrap justify-center gap-2">
                                 {project.acf.tech_stack.map((tech, index) => (
@@ -44,8 +44,8 @@ const ProjectList = () => {
                                 ))}
                                 </ul>
                             )} */}
-                            <a href={project.acf.live_link} className="text-main-white hover:text-main-accent transition duration-300 px-4 py-2
-                            border-2 border-white bg-main-accent hover:bg-main-white rounded-full inline-block mt-4">Live Site</a>
+                            {/* <a href={project.acf.live_link} className="text-main-light hover:text-main-accent transition duration-300 px-4 py-2
+                            border-2 border-main-light bg-main-accent hover:bg-main-light rounded-full inline-block mt-4">Live Site</a> */}
                         </div>
                 </article>
             ))}
