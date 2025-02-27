@@ -26,15 +26,18 @@ const ProjectList = () => {
                         <img
                             src={project._embedded['wp:featuredmedia'][0].source_url}
                             alt={project.title.rendered}
-                            className="relative w-1/2 z-30 left-0 rounded-xl m-[50px] mb-0 shadow-[0_0_30.4px_9px] shadow-main-shadow"
+                            className="relative w-1/2 h-1/2 object-cover z-30 left-0 rounded-xl m-[50px] mb-0 shadow-[0_0_30.4px_9px] shadow-main-shadow"
                         />
                         )}
 
                         {/* PROJECT INFORMATION */}
                         <div className='relative top-60% float-right z-20 bg-main-light rounded-xl p-10 w-1/2 h-1/2
                         m-[50px] -mt-[100px] shadow-[0_0_30.4px_9px] shadow-main-shadow'>
-                            <h3 className="text-2xl font-semibold mb-6 ml-[25%] text-main-black">{project.title.rendered}</h3>
-                            <div className="mb-4 ml-[25%] text-sm text-main-black" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
+                            <h3 className="text-2xl font-semibold mb-6 ml-[20%] text-main-black">{project.title.rendered}</h3>
+                            <div className='absolute left-5 bottom-5 w-[15%] h-[60%] m-0 rounded-xl bg-main-black'>
+                                
+                            </div>
+                            <div className="mb-4 ml-[20%] text-sm text-main-black" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
                             {/* {Array.isArray(project.acf.tech_stack) && (
                                 <ul className="mb-4 flex flex-wrap justify-center gap-2">
                                 {project.acf.tech_stack.map((tech, index) => (
