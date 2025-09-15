@@ -20,7 +20,7 @@ const ProjectList = () => {
             className='
                 mx-auto mt-32 flex flex-col gap-16 
                 items-center bg-main-black content-center ease-in px-4
-                md:mt-[25rem] md:gap-20
+                md:mt-[25rem] md:gap-20 md:px-0
             '
         >
             {projects.map(project => (
@@ -31,33 +31,27 @@ const ProjectList = () => {
                         flex flex-col 
                         overflow-hidden 
                         transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl
-                        border border-main-accent
+                        border border-main-black
                         md:max-w-6xl md:rounded-xl md:h-dvh md:flex-shrink-0 md:items-center
-                        md:overflow-visible
+                        md:overflow-visible md:grid md:grid-cols-2 md:gap-0
                     "
                 >
                     {/* PROJECT SCREENSHOT */}
                     {project._embedded && project._embedded['wp:featuredmedia'] && (
-                        <div 
+                        <img
+                            src={project._embedded['wp:featuredmedia'][0].source_url}
+                            alt={project.title.rendered}
                             className="
-                                w-full h-64 flex-shrink-0
-                                md:relative md:w-1/2 md:h-1/2 md:left-0
+                                w-full h-64 object-cover rounded-t-xl
+                                md:relative md:w-full md:h-1/2 md:rounded-r-xl md:rounded-l-none
                             "
-                        >
-                            <img
-                                src={project._embedded['wp:featuredmedia'][0].source_url}
-                                alt={project.title.rendered}
-                                className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"
-                            />
-                        </div>
+                        />
                     )}
 
                     {/* PROJECT INFORMATION */}
                     <div className="
                         flex flex-col justify-between p-6 w-full 
-                        md:w-3/5
-                        md:p-10
-                        md:min-h-[320px]
+                        md:p-10 md:min-h-[320px]
                     ">
                         <h3 className="text-2xl font-bold mb-4 text-main-black">{project.title.rendered}</h3>
                         <div className="mb-4 text-base text-main-black" dangerouslySetInnerHTML={{ __html: project.acf.description }} />

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import ProjectList from './components/ProjectList';
 import About from './components/About';
-import ProjectDetails from './components/ProjectDetails';
 
 const App = () => {
   return (
@@ -17,7 +16,6 @@ const App = () => {
                         <About />
                     </>
                 } />
-                <Route path="/project/:id" element={<ProjectDetails />} />
             </Routes>
         </Router>
     </div>
