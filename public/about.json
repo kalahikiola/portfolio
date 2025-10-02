@@ -1,0 +1,16 @@
+{
+    "introduction": "I am a junior web developer with experience in building modern web applications. I enjoy working with the latest technologies to create efficient, scalable, and user-friendly applications. My expertise lies in front-end development, and I am proficient in a variety of programming languages and frameworks.<br>I previously graduated with B.SC in computer science from the University of Victoria and am currently attending BCIT. I will be completing the Front-End Web Development certificate in July.<br>When I'm not coding, I enjoy playing video games, mountain biking, or building Gundam model kits.",
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science",
+            "institution": "University of Victoria"
+        },
+        {
+            "degree": "Front-End Web Development Certificate",
+            "institution": "British Columbia Institute of Technology (BCIT)"
+        }
+    ],
+    "contact": "aaronkbence@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/aaronbence/",
+    "github": "https://github.com/kalahikiola"
+}
