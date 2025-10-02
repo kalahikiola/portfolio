@@ -4,7 +4,7 @@
             "title": "Dust Walkers",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis laoreet magna. Sed ex massa, feugiat et tincidunt vitae, blandit in tortor. Duis feugiat dapibus vehicula. Aenean a sem pulvinar, pulvinar leo eu, ultricies ligula. Integer mauris metus, hendrerit id venenatis quis, mattis a odio. Fusce ornare tortor vel ligula eleifend, viverra finibus sem pretium. Maecenas faucibus bibendum turpis, vestibulum sodales justo pellentesque a. Curabitur non velit vitae leo pretium ornare. Nunc quis massa sit amet nisl tristique varius. Duis ultrices magna augue, sit amet finibus erat suscipit quis. Pellentesque vel mollis ante.",
             "image": "dustwalkers.png",
-            "tech-stack": [
+            "tech_stack": [
                 "Unity", 
                 "C#", 
                 "Plastic SCM"
@@ -14,13 +14,13 @@
         {
             "title": "West Coast Summit Supply",
             "description": "West Coast Summit Supply is a fictional outdoor gear store brought to life through a custom-built e-commerce website. Designed with WordPress and WooCommerce, this project served as the capstone for the BCIT FWD program.",
-            "key-features": [
+            "key_features": [
                 "Custom WP Hooks & Templates - Enhanced functionality with templates and custom WordPress hooks",
                 "Custom JavaScript - Improved interactivity and dynamic elements for a smooth user experience",
                 "Google Maps Store Finder - Integrated a store locator using the Google Maps API"
             ],
             "image": "wcss.png",
-            "tech-stack": [
+            "tech_stack": [
                 "JavaScript", 
                 "HTML", 
                 "CSS",
@@ -35,7 +35,7 @@
             "title": "Portfolio Site",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum felis ac condimentum suscipit. Suspendisse in tellus vel urna vestibulum lacinia in nec nulla. Proin placerat elit ac tincidunt luctus. Nunc ac orci at mi venenatis convallis in tincidunt ex. Etiam auctor lorem vitae finibus aliquet. Vestibulum a elit gravida, tincidunt magna eget, commodo velit. Aenean pharetra convallis sem ullamcorper accumsan. ",
             "image": "portfolio.png",
-            "tech-stack": [
+            "tech_stack": [
                 "React", 
                 "JavaScript", 
                 "Vue.js",
