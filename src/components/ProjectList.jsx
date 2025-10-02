@@ -1,18 +1,25 @@
 import React, { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
 
 const ProjectList = () => {
-    const [projects, setProjects] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('https://aaronbence.dev/portfolio-backend/wp-json/wp/v2/project?_embed')
-        .then(response => {
-            setProjects(response.data);
-        })
-        .catch(error => {
-            console.error('Error fetching data from WordPress', error);
-        });
+        fetch('/projects.json')
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error('Error fetching project data:', error));
     }, []);
+
+    if (data.length === 0) {
+        return (
+            <section id="projects" className="my-8 px-4 h-screen">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-3xl font-semibold mb-8">Projects</h2>
+                    <p>Loading...</p>
+                </div>
+            </section>
+        );
+    }
 
     return (
         <section 
@@ -23,9 +30,8 @@ const ProjectList = () => {
                 md:mt-[25rem] md:gap-20 md:px-0
             '
         >
-            {projects.map(project => (
+            {data.projects.map((project, index) => (
                 <article
-                    key={project.id}
                     className="
                         project group relative bg-main-light rounded-2xl shadow-lg w-full max-w-3xl 
                         flex flex-col 
@@ -37,27 +43,25 @@ const ProjectList = () => {
                     "
                 >
                     {/* PROJECT SCREENSHOT */}
-                    {project._embedded && project._embedded['wp:featuredmedia'] && (
                         <img
-                            src={project._embedded['wp:featuredmedia'][0].source_url}
-                            alt={project.title.rendered}
+                            src={project.image}
+                            alt={project.title}
                             className="
                                 w-full h-64 object-cover rounded-t-xl
                                 md:relative md:w-full md:h-1/2 md:rounded-r-xl md:rounded-l-none
                             "
                         />
-                    )}
 
                     {/* PROJECT INFORMATION */}
                     <div className="
                         flex flex-col justify-between p-6 w-full 
                         md:p-10 md:min-h-[320px]
                     ">
-                        <h3 className="text-2xl font-bold mb-4 text-main-black">{project.title.rendered}</h3>
-                        <div className="mb-4 text-base text-main-black" dangerouslySetInnerHTML={{ __html: project.acf.description }} />
-                        {Array.isArray(project.acf.tech_stack) && (
+                        <h3 className="text-2xl font-bold mb-4 text-main-black">{project.title}</h3>
+                        <div className="mb-4 text-base text-main-black" dangerouslySetInnerHTML={{ __html: project.description }} />
+                        {Array.isArray(project.tech_stack) && (
                             <ul className="mb-4 flex flex-wrap gap-2">
-                                {project.acf.tech_stack.map((tech, index) => (
+                                {project.tech_stack.map((tech, index) => (
                                     <li key={index} className="bg-main-accent text-main-white px-3 py-1 rounded-full text-xs font-medium">
                                         {tech}
                                     </li>
@@ -65,7 +69,7 @@ const ProjectList = () => {
                             </ul>
                         )}
                         <a
-                            href={project.acf.live_link}
+                            href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="self-start mt-2 px-5 py-2 rounded-full bg-main-accent text-main-light font-semibold border border-main-accent hover:bg-main-light hover:text-main-accent transition duration-300"
