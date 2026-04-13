@@ -31,7 +31,7 @@ const About = () => {
                         <h3 className="text-xl font-semibold mb-2">Education</h3>
                         <ul>
                             {data.education.map ((item, index) => (
-                            <li>
+                            <li key={index} className="mb-1 text-left">
                             {item.degree} - {item.institution}
                             </li>
                             ))}

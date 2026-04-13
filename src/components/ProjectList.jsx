@@ -32,6 +32,7 @@ const ProjectList = () => {
         >
             {data.projects.map((project, index) => (
                 <article
+                    key={index}
                     className="
                         project group relative bg-main-light rounded-2xl shadow-lg w-full max-w-3xl 
                         flex flex-col 
