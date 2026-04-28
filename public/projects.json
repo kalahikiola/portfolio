@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Dust Walkers",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis laoreet magna. Sed ex massa, feugiat et tincidunt vitae, blandit in tortor. Duis feugiat dapibus vehicula. Aenean a sem pulvinar, pulvinar leo eu, ultricies ligula. Integer mauris metus, hendrerit id venenatis quis, mattis a odio. Fusce ornare tortor vel ligula eleifend, viverra finibus sem pretium. Maecenas faucibus bibendum turpis, vestibulum sodales justo pellentesque a. Curabitur non velit vitae leo pretium ornare. Nunc quis massa sit amet nisl tristique varius. Duis ultrices magna augue, sit amet finibus erat suscipit quis. Pellentesque vel mollis ante.",
+            "description": "Dust Walkers is a top-down action roguelite base defense game. Players deploy as Dust Walkers, elite operatives tasked with protecting a mining operation against relentless waves of enemies across a hostile galaxy. The game blends base building, squad tactics, and roguelite progression into a single-player experience built around escalating runs and game-breaking builds.",
             "image": "/images/Dustwalkers_Keyart.png",
             "tech_stack": [
                 "Unity", 

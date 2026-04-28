@@ -27,7 +27,7 @@ const ProjectList = () => {
             className='
                 mx-auto mt-32 flex flex-col gap-16 
                 items-center bg-main-black content-center ease-in px-4
-                md:mt-[25rem] md:gap-20 md:px-0
+                md:mt-[25rem] md:gap-[12.5vh] md:px-0 md:py-[12.5vh]
             '
         >
             {data.projects.map((project, index) => (
@@ -37,10 +37,9 @@ const ProjectList = () => {
                         project group relative bg-main-light rounded-2xl shadow-lg w-full max-w-3xl 
                         flex flex-col 
                         overflow-hidden 
-                        transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl
                         border border-main-black
-                        md:max-w-6xl md:rounded-xl md:h-dvh md:flex-shrink-0 md:items-center
-                        md:overflow-visible md:grid md:grid-cols-2 md:gap-0
+                        md:max-w-6xl md:rounded-xl md:h-[75vh] md:flex-shrink-0 md:items-center
+                        md:overflow-visible md:grid md:grid-rows-2 md:gap-0
                     "
                 >
                     {/* PROJECT SCREENSHOT */}
@@ -49,7 +48,7 @@ const ProjectList = () => {
                             alt={project.title}
                             className="
                                 w-full h-64 object-cover rounded-t-xl
-                                md:relative md:w-full md:h-1/2 md:rounded-r-xl md:rounded-l-none
+                                md:relative md:w-full md:h-full
                             "
                         />
 
