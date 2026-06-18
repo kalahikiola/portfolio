@@ -38,7 +38,7 @@ const ProjectList = () => {
                         flex flex-col 
                         overflow-hidden 
                         border border-main-black
-                        md:max-w-6xl md:rounded-xl md:h-[75vh] md:flex-shrink-0 md:items-center
+                        md:max-w-6xl md:rounded-b-xl md:h-[75vh] md:flex-shrink-0 md:items-center
                         md:overflow-visible md:grid md:grid-rows-2 md:gap-0
                     "
                 >
@@ -47,8 +47,8 @@ const ProjectList = () => {
                             src={project.image}
                             alt={project.title}
                             className="
-                                w-full h-64 object-cover rounded-t-xl
-                                md:relative md:w-full md:h-full
+                                w-full h-64 object-cover object-[10%_15%] rounded-t-xl
+                                md:relative md:h-full
                             "
                         />
 
