@@ -33,7 +33,7 @@
         },
         {
             "title": "Portfolio Site",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum felis ac condimentum suscipit. Suspendisse in tellus vel urna vestibulum lacinia in nec nulla. Proin placerat elit ac tincidunt luctus. Nunc ac orci at mi venenatis convallis in tincidunt ex. Etiam auctor lorem vitae finibus aliquet. Vestibulum a elit gravida, tincidunt magna eget, commodo velit. Aenean pharetra convallis sem ullamcorper accumsan. ",
+            "description": "This portfolio site was built using React and Tailwind CSS. It serves as a showcase of my projects and skills, while also being a project in itself.",
             "image": "/images/portfolio.png",
             "tech_stack": [
                 "React", 
