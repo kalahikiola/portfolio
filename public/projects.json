@@ -2,6 +2,7 @@
     "projects": [
         {
             "title": "Dust Walkers",
+            "type": "Steam Page",
             "description": "Dust Walkers is a top-down action roguelite base defense game. Players deploy as Dust Walkers, elite operatives tasked with protecting a mining operation against relentless waves of enemies across a hostile galaxy. The game blends base building, squad tactics, and roguelite progression into a single-player experience built around escalating runs and game-breaking builds.",
             "image": "/images/Dustwalkers_Keyart.png",
             "tech_stack": [
@@ -13,6 +14,7 @@
         },
         {
             "title": "West Coast Summit Supply",
+            "type": "Live Site",
             "description": "West Coast Summit Supply is a fictional outdoor gear store brought to life through a custom-built e-commerce website. Designed with WordPress and WooCommerce, this project served as the capstone for the BCIT FWD program.",
             "key_features": [
                 "Custom WP Hooks & Templates - Enhanced functionality with templates and custom WordPress hooks",
@@ -33,6 +35,7 @@
         },
         {
             "title": "Portfolio Site",
+            "type": "Live Site",
             "description": "This portfolio site was built using React and Tailwind CSS. It serves as a showcase of my projects and skills, while also being a project in itself.",
             "image": "/images/portfolio.png",
             "tech_stack": [

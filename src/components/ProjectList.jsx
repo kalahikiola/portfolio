@@ -74,7 +74,7 @@ const ProjectList = () => {
                             rel="noopener noreferrer"
                             className="self-start mt-2 px-5 py-2 rounded-full bg-main-accent text-main-light font-semibold border border-main-accent hover:bg-main-light hover:text-main-accent transition duration-300"
                         >
-                            Live Site
+                            {project.type}
                         </a>
                     </div>
                 </article>
