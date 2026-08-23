@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section id='home' className="h-screen flex flex-col justify-center items-center ">
         
-        <h1 className="text-5xl font-extrabold text-main-accent">Aaron Bence</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-main-accent">Aaron Bence</h1>
         <p className="home-p text-2xl mt-4 text-main-light">Software Developer</p>
 
         {/* ARROW SVG */}

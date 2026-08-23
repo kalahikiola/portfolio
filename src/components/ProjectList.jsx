@@ -34,7 +34,7 @@ const ProjectList = () => {
                 <article
                     key={index}
                     className="
-                        project group relative bg-main-light rounded-2xl shadow-lg w-full max-w-3xl 
+                        project group relative bg-main-light rounded-2xl w-full max-w-3xl 
                         flex flex-col 
                         overflow-hidden 
                         border border-main-black
@@ -47,7 +47,7 @@ const ProjectList = () => {
                             src={project.image}
                             alt={project.title}
                             className="
-                                w-full h-64 object-cover object-[10%_15%] rounded-t-xl
+                                w-full h-64 object-cover md:object-[10%_15%] rounded-t-xl
                                 md:relative md:h-full
                             "
                         />
@@ -55,7 +55,7 @@ const ProjectList = () => {
                     {/* PROJECT INFORMATION */}
                     <div className="
                         flex flex-col justify-between p-6 w-full 
-                        md:p-10 md:min-h-[320px]
+                        md:p-10 md:px-14 md:min-h-[320px] 
                     ">
                         <h3 className="text-2xl font-bold mb-4 text-main-black">{project.title}</h3>
                         <div className="mb-4 text-base text-main-black" dangerouslySetInnerHTML={{ __html: project.description }} />
@@ -72,7 +72,7 @@ const ProjectList = () => {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="self-start mt-2 px-5 py-2 rounded-full bg-main-accent text-main-light font-semibold border border-main-accent hover:bg-main-light hover:text-main-accent transition duration-300"
+                            className="self-start mt-8 px-5 py-2 rounded-full bg-main-accent text-main-light font-semibold border-2 border-main-black hover:bg-main-light hover:text-main-accent transition duration-300"
                         >
                             {project.type}
                         </a>
